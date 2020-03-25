@@ -1,0 +1,37 @@
+DATE: 2020-02-29 12:26:01 AM Exception: org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+DATE: 2020-02-29 12:26:01 AM  Server Shutting down
+DATE: 2020-02-29 12:43:21 AM Exception: org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+DATE: 2020-02-29 12:43:21 AM  Server Shutting down
+DATE: 2020-02-29 12:51:23 AM  Server is Up & Running
+DATE: 2020-02-29 12:51:23 AM  UDP Server Started at port 6666
+DATE: 2020-02-29 01:03:00 AM  Server is Up & Running
+DATE: 2020-02-29 01:03:37 AM  Server is Up & Running
+DATE: 2020-02-29 01:03:37 AM  UDP Server Started at port 6666
+DATE: 2020-03-01 04:49:03 PM  Server is Up & Running
+DATE: 2020-03-01 04:49:03 PM  UDP Server Started at port 6666
+DATE: 2020-03-01 04:54:54 PM  Server is Up & Running
+DATE: 2020-03-01 04:54:54 PM  UDP Server Started at port 6666
+DATE: 2020-03-01 05:03:48 PM  Server is Up & Running
+DATE: 2020-03-01 05:03:48 PM  UDP Server Started at port 6666
+DATE: 2020-03-01 05:35:57 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:35:57 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+ (SHEE080620) in the Evening of 08/06/2020 Total[Remaining] Capacity: 1[1] ||  (SHEE110620) in the Evening of 11/06/2020 Total[Remaining] Capacity: 1[1] || 
+=====================================
+;
+DATE: 2020-03-01 05:36:43 PM ClientID: MTLC1234 | RequestType:  UDP request received bookEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:36:43 PM ClientID: MTLC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse: Success: Event SHEE080620 Booked Successfully
+DATE: 2020-03-01 05:36:43 PM ClientID: MTLC1234 | RequestType:  UDP reply sent bookEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse: Success: Event SHEE080620 Booked Successfully;
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  UDP request received bookEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse: Success: Event SHEE110620 Booked Successfully
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  UDP reply sent bookEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse: Success: Event SHEE110620 Booked Successfully;
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  UDP request received cancelEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  CORBA cancelEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse: Success: Event SHEE080620 Canceled for MTLC1234
+DATE: 2020-03-01 05:37:59 PM ClientID: MTLC1234 | RequestType:  UDP reply sent cancelEvent  | RequestParameters:  eventID: SHEE080620 eventType: Conferences  | ServerResponse: Success: Event SHEE080620 Canceled for MTLC1234;
+DATE: 2020-03-01 05:38:40 PM ClientID: MTLC1234 | RequestType:  UDP request received cancelEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:38:40 PM ClientID: MTLC1234 | RequestType:  CORBA cancelEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse: Success: Event SHEE110620 Canceled for MTLC1234
+DATE: 2020-03-01 05:38:40 PM ClientID: MTLC1234 | RequestType:  UDP reply sent cancelEvent  | RequestParameters:  eventID: SHEE110620 eventType: Conferences  | ServerResponse: Success: Event SHEE110620 Canceled for MTLC1234;
+DATE: 2020-03-01 05:39:10 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:39:10 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+ (SHEE080620) in the Evening of 08/06/2020 Total[Remaining] Capacity: 1[1] ||  (SHEE110620) in the Evening of 11/06/2020 Total[Remaining] Capacity: 1[1] || 
+=====================================
+;

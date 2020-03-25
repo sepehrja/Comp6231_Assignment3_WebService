@@ -1,0 +1,50 @@
+DATE: 2020-02-29 12:51:54 AM  login attempt
+DATE: 2020-02-29 12:51:54 AM  Manager Login successful
+DATE: 2020-02-29 01:53:54 AM  login attempt
+DATE: 2020-02-29 01:53:54 AM  Manager Login successful
+DATE: 2020-02-29 01:53:57 AM  attempting ORB shutdown
+DATE: 2020-02-29 01:53:57 AM  shutdown
+DATE: 2020-03-01 05:35:49 PM  login attempt
+DATE: 2020-03-01 05:35:49 PM  Manager Login successful
+DATE: 2020-03-01 05:35:57 PM  attempting to listEventAvailability
+DATE: 2020-03-01 05:35:57 PM Client Action:  listEventAvailability | RequestParameters:  eventType: Conferences  | Server Response: MONTREAL Server Conferences:
+ (MTLA090620) in the Afternoon of 09/06/2020 Total[Remaining] Capacity: 2[2] ||  (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[2] || 
+=====================================
+SHERBROOK Server Conferences:
+ (SHEE080620) in the Evening of 08/06/2020 Total[Remaining] Capacity: 1[1] ||  (SHEE110620) in the Evening of 11/06/2020 Total[Remaining] Capacity: 1[1] || 
+=====================================
+QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+
+DATE: 2020-03-01 05:36:43 PM  attempting to bookEvent
+DATE: 2020-03-01 05:36:43 PM Client Action:  bookEvent | RequestParameters:  customerID: MTLC1234 eventID: SHEE080620 eventType: Conferences  | Server Response: Success: Event SHEE080620 Booked Successfully
+DATE: 2020-03-01 05:37:26 PM  attempting to swapEvent
+DATE: 2020-03-01 05:37:26 PM Client Action:  swapEvent | RequestParameters:  customerID: MTLC1122 oldEventID: SHEE080620 oldEventType: Conferences newEventID: SHEE110620 newEventType: Conferences  | Server Response: Failed: You MTLC1122 Are Not Registered in SHEE080620
+DATE: 2020-03-01 05:37:59 PM  attempting to swapEvent
+DATE: 2020-03-01 05:37:59 PM Client Action:  swapEvent | RequestParameters:  customerID: MTLC1234 oldEventID: SHEE080620 oldEventType: Conferences newEventID: SHEE110620 newEventType: Conferences  | Server Response: Success: Event SHEE080620 swapped with SHEE110620
+DATE: 2020-03-01 05:38:09 PM  attempting to getBookingSchedule
+DATE: 2020-03-01 05:38:09 PM Client Action:  getBookingSchedule | RequestParameters:  customerID: MTLC1234  | Server Response: Conferences:
+SHEE110620 ||
+=====================================
+
+DATE: 2020-03-01 05:38:40 PM  attempting to swapEvent
+DATE: 2020-03-01 05:38:40 PM Client Action:  swapEvent | RequestParameters:  customerID: MTLC1234 oldEventID: SHEE110620 oldEventType: Conferences newEventID: MTLE101020 newEventType: Conferences  | Server Response: Success: Event SHEE110620 swapped with MTLE101020
+DATE: 2020-03-01 05:38:48 PM  attempting to getBookingSchedule
+DATE: 2020-03-01 05:38:48 PM Client Action:  getBookingSchedule | RequestParameters:  customerID: MTLC1234  | Server Response: Conferences:
+MTLE101020 ||
+=====================================
+
+DATE: 2020-03-01 05:39:10 PM  attempting to listEventAvailability
+DATE: 2020-03-01 05:39:10 PM Client Action:  listEventAvailability | RequestParameters:  eventType: Conferences  | Server Response: MONTREAL Server Conferences:
+ (MTLA090620) in the Afternoon of 09/06/2020 Total[Remaining] Capacity: 2[2] ||  (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[1] || 
+=====================================
+SHERBROOK Server Conferences:
+ (SHEE080620) in the Evening of 08/06/2020 Total[Remaining] Capacity: 1[1] ||  (SHEE110620) in the Evening of 11/06/2020 Total[Remaining] Capacity: 1[1] || 
+=====================================
+QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+
+DATE: 2020-03-01 05:39:28 PM  attempting ORB shutdown
+DATE: 2020-03-01 05:39:28 PM  shutdown

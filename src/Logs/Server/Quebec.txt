@@ -1,0 +1,24 @@
+DATE: 2020-02-29 12:26:05 AM Exception: org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+DATE: 2020-02-29 12:26:05 AM  Server Shutting down
+DATE: 2020-02-29 12:43:25 AM Exception: org.omg.CORBA.COMM_FAILURE:   vmcid: SUN  minor code: 201  completed: No
+DATE: 2020-02-29 12:43:25 AM  Server Shutting down
+DATE: 2020-02-29 01:03:00 AM  Server is Up & Running
+DATE: 2020-02-29 01:03:00 AM  UDP Server Started at port 7777
+DATE: 2020-02-29 01:03:37 AM  Server is Up & Running
+DATE: 2020-02-29 01:03:37 AM  UDP Server Started at port 7777
+DATE: 2020-03-01 04:49:03 PM  Server is Up & Running
+DATE: 2020-03-01 04:49:03 PM  UDP Server Started at port 7777
+DATE: 2020-03-01 04:54:54 PM  Server is Up & Running
+DATE: 2020-03-01 04:54:54 PM  UDP Server Started at port 7777
+DATE: 2020-03-01 05:03:48 PM  Server is Up & Running
+DATE: 2020-03-01 05:03:48 PM  UDP Server Started at port 7777
+DATE: 2020-03-01 05:35:57 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:35:57 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+;
+DATE: 2020-03-01 05:39:10 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-01 05:39:10 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+;
