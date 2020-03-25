@@ -28,12 +28,12 @@ public class ServerInstance {
             case "QUE":
                 serverName = EventManagement.EVENT_SERVER_QUEBEC;
                 serverUdpPort = EventManagement.Quebec_Server_Port;
-                serverEndpoint = "http://localhost:8081/quebec";
+                serverEndpoint = "http://localhost:8080/quebec";
                 break;
             case "SHE":
                 serverName = EventManagement.EVENT_SERVER_SHERBROOK;
                 serverUdpPort = EventManagement.Sherbrooke_Server_Port;
-                serverEndpoint = "http://localhost:8082/sherbrook";
+                serverEndpoint = "http://localhost:8080/sherbrook";
                 break;
         }
         try {

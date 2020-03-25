@@ -50,3 +50,32 @@ DATE: 2020-03-25 06:51:07 PM ClientID: Event Manager | RequestType:  UDP reply s
 No Events of Type Conferences
 =====================================
 ;
+DATE: 2020-03-25 06:54:00 PM  Server Started...
+DATE: 2020-03-25 06:54:02 PM  Server is Up & Running
+DATE: 2020-03-25 06:54:02 PM  UDP Server Started at port 6666
+DATE: 2020-03-25 06:54:32 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-25 06:54:32 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+No Events of Type Conferences
+=====================================
+;
+DATE: 2020-03-25 06:54:52 PM ClientID: Event Manager | RequestType:  UDP request sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-03-25 06:54:52 PM ClientID: Event Manager | RequestType:  UDP reply receivedlistEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+
+DATE: 2020-03-25 06:54:52 PM ClientID: Event Manager | RequestType:  UDP request sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-03-25 06:54:52 PM ClientID: Event Manager | RequestType:  UDP reply receivedlistEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: MONTREAL Server Conferences:
+ (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[2] || 
+=====================================
+
+DATE: 2020-03-25 06:54:52 PM ClientID: Event Manager | RequestType:  CORBA listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+No Events of Type Conferences
+
+=====================================
+QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+MONTREAL Server Conferences:
+ (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[2] || 
+=====================================
+

@@ -38,11 +38,11 @@ public class Client {
         QName montrealQName = new QName("http://implementaion.service.web.com/", "EventManagementService");
         montrealService = Service.create(montrealURL, montrealQName);
 
-        URL quebecURL = new URL("http://localhost:8081/quebec?wsdl");
+        URL quebecURL = new URL("http://localhost:8080/quebec?wsdl");
         QName quebecQName = new QName("http://implementaion.service.web.com/", "EventManagementService");
         quebecService = Service.create(quebecURL, quebecQName);
 
-        URL sherbrookURL = new URL("http://localhost:8082/sherbrook?wsdl");
+        URL sherbrookURL = new URL("http://localhost:8080/sherbrook?wsdl");
         QName sherbrookQName = new QName("http://implementaion.service.web.com/", "EventManagementService");
         sherbrookService = Service.create(sherbrookURL, sherbrookQName);
         init();
