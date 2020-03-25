@@ -3,7 +3,8 @@ package DataModel;
 import java.util.ArrayList;
 import java.util.List;
 
-import static ServerInterface.EventManagement.*;
+import static com.web.service.implementaion.EventManagement.*;
+
 
 public class EventModel {
     public static final String EVENT_TIME_MORNING = "Morning";

@@ -35,3 +35,18 @@ DATE: 2020-03-01 05:39:10 PM ClientID: Event Manager | RequestType:  UDP reply s
  (SHEE080620) in the Evening of 08/06/2020 Total[Remaining] Capacity: 1[1] ||  (SHEE110620) in the Evening of 11/06/2020 Total[Remaining] Capacity: 1[1] || 
 =====================================
 ;
+DATE: 2020-03-25 06:44:42 PM  Server Started...
+DATE: 2020-03-25 06:44:45 PM  Server is Up & Running
+DATE: 2020-03-25 06:44:45 PM  Server Shutting down
+DATE: 2020-03-25 06:44:45 PM  UDP Server Started at port 6666
+DATE: 2020-03-25 06:46:13 PM  Server Started...
+DATE: 2020-03-25 06:46:14 PM  Server is Up & Running
+DATE: 2020-03-25 06:46:14 PM  UDP Server Started at port 6666
+DATE: 2020-03-25 06:49:35 PM  Server Started...
+DATE: 2020-03-25 06:49:37 PM  Server is Up & Running
+DATE: 2020-03-25 06:49:37 PM  UDP Server Started at port 6666
+DATE: 2020-03-25 06:51:07 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-25 06:51:07 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+No Events of Type Conferences
+=====================================
+;

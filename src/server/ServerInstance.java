@@ -39,16 +39,16 @@ public class ServerInstance {
         try {
             System.out.println(serverName + " Server Started...");
             Logger.serverLog(serverID, " Server Started...");
-            EventManagement server = new EventManagement(serverID, serverName);
+            EventManagement service = new EventManagement(serverID, serverName);
 
-            Endpoint endpoint = Endpoint.publish(serverEndpoint, server);
+            Endpoint endpoint = Endpoint.publish(serverEndpoint, service);
 
             System.out.println(serverName + " Server is Up & Running");
             Logger.serverLog(serverID, " Server is Up & Running");
 
 //            addTestData(server);
             Runnable task = () -> {
-                listenForRequest(server, serverUdpPort, serverName, serverID);
+                listenForRequest(service, serverUdpPort, serverName, serverID);
             };
             Thread thread = new Thread(task);
             thread.start();
@@ -59,8 +59,8 @@ public class ServerInstance {
             Logger.serverLog(serverID, "Exception: " + e);
         }
 
-        System.out.println(serverName + " Server Shutting down");
-        Logger.serverLog(serverID, " Server Shutting down");
+//        System.out.println(serverName + " Server Shutting down");
+//        Logger.serverLog(serverID, " Server Shutting down");
 
     }
 
