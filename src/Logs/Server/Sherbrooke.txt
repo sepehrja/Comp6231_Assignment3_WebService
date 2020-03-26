@@ -82,3 +82,28 @@ MONTREAL Server Conferences:
 DATE: 2020-03-25 06:56:50 PM  Server Started...
 DATE: 2020-03-25 06:56:51 PM  Server is Up & Running
 DATE: 2020-03-25 06:56:51 PM  UDP Server Started at port 6666
+DATE: 2020-03-26 05:27:37 PM  Server Started...
+DATE: 2020-03-26 05:27:38 PM  Server is Up & Running
+DATE: 2020-03-26 05:27:38 PM  UDP Server Started at port 6666
+DATE: 2020-03-26 06:22:01 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-03-26 06:22:01 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+No Events of Type Conferences
+=====================================
+;
+DATE: 2020-03-26 06:22:36 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-03-26 06:22:36 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse: Success: Event MTLE101020 Booked Successfully
+DATE: 2020-03-26 06:22:36 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse: Success: Event MTLE101020 Booked Successfully
+DATE: 2020-03-26 06:22:40 PM ClientID: SHEC1234 | RequestType:  CORBA getBookingSchedule  | RequestParameters: null | ServerResponse: Conferences:
+MTLE101020 ||
+=====================================
+
+DATE: 2020-03-26 06:22:52 PM ClientID: SHEC1234 | RequestType:  UDP request sent cancelEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-03-26 06:22:52 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedcancelEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse: Success: Event MTLE101020 Canceled for SHEC1234
+DATE: 2020-03-26 06:22:52 PM ClientID: SHEC1234 | RequestType:  CORBA cancelEvent  | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | ServerResponse: Success: Event MTLE101020 Canceled for SHEC1234
+DATE: 2020-03-26 06:22:56 PM ClientID: SHEC1234 | RequestType:  CORBA getBookingSchedule  | RequestParameters: null | ServerResponse: Conferences:
+
+=====================================
+
+DATE: 2020-03-26 06:27:15 PM  Server Started...
+DATE: 2020-03-26 06:27:17 PM  Server is Up & Running
+DATE: 2020-03-26 06:27:17 PM  UDP Server Started at port 6666

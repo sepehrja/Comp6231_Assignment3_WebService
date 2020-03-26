@@ -738,6 +738,10 @@ public class EventManagement implements WebInterface {
     public void addNewCustomerToClients(String customerID) {
         ClientModel newCustomer = new ClientModel(customerID);
         serverClients.put(newCustomer.getClientID(), newCustomer);
-        clientEvents.put(newCustomer.getClientID(), new ConcurrentHashMap<>());
+        Map<String, List<String>> emptyEvents = new ConcurrentHashMap<>();
+        emptyEvents.put(EventModel.CONFERENCES, new ArrayList<>());
+        emptyEvents.put(EventModel.TRADE_SHOWS, new ArrayList<>());
+        emptyEvents.put(EventModel.SEMINARS, new ArrayList<>());
+        clientEvents.put(newCustomer.getClientID(), emptyEvents);
     }
 }
