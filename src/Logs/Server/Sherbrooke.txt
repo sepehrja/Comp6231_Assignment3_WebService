@@ -79,3 +79,6 @@ MONTREAL Server Conferences:
  (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[2] || 
 =====================================
 
+DATE: 2020-03-25 06:56:50 PM  Server Started...
+DATE: 2020-03-25 06:56:51 PM  Server is Up & Running
+DATE: 2020-03-25 06:56:51 PM  UDP Server Started at port 6666

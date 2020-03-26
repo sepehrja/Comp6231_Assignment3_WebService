@@ -528,7 +528,7 @@ public class EventManagement implements WebInterface {
             DatagramPacket reply = new DatagramPacket(buffer, buffer.length);
 
             aSocket.receive(reply);
-            result = new String(reply.getData());
+            result = new String(reply.getData()).trim();
             String[] parts = result.split(";");
             result = parts[0];
         } catch (SocketException e) {
@@ -640,7 +640,7 @@ public class EventManagement implements WebInterface {
                 removeEventIfExists(customerID, eventType, oldEventID);
                 String nextSameEventResult = getNextSameEvent(allEvents.get(eventType).keySet(), eventType, oldEventID);
                 if (nextSameEventResult.equals("Failed")) {
-                    response = "Acquiring nextSaneEvent :" + nextSameEventResult;
+                    response = "Acquiring nextSameEvent :" + nextSameEventResult;
                     try {
                         Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
                     } catch (IOException e) {
