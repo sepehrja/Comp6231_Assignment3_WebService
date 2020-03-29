@@ -1,0 +1,15 @@
+DATE: 2020-03-26 06:28:01 PM  login attempt
+DATE: 2020-03-26 06:28:01 PM  Customer Login successful
+DATE: 2020-03-26 06:28:02 PM  attempting to getBookingSchedule
+DATE: 2020-03-26 06:28:02 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Booking Schedule Empty For MTLC1111
+DATE: 2020-03-26 06:28:38 PM  attempting to getBookingSchedule
+DATE: 2020-03-26 06:28:38 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Seminars:
+
+=====================================
+Conferences:
+
+=====================================
+Trade Shows:
+
+=====================================
+

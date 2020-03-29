@@ -1,0 +1,16 @@
+DATE: 2020-03-26 06:22:20 PM  login attempt
+DATE: 2020-03-26 06:22:20 PM  Customer Login successful
+DATE: 2020-03-26 06:22:36 PM  attempting to bookEvent
+DATE: 2020-03-26 06:22:36 PM Client Action:  bookEvent | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | Server Response: Success: Event MTLE101020 Booked Successfully
+DATE: 2020-03-26 06:22:40 PM  attempting to getBookingSchedule
+DATE: 2020-03-26 06:22:40 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Conferences:
+MTLE101020 ||
+=====================================
+
+DATE: 2020-03-26 06:22:52 PM  attempting to cancelEvent
+DATE: 2020-03-26 06:22:52 PM Client Action:  bookEvent | RequestParameters:  eventID: MTLE101020 eventType: Conferences  | Server Response: Success: Event MTLE101020 Canceled for SHEC1234
+DATE: 2020-03-26 06:22:56 PM  attempting to getBookingSchedule
+DATE: 2020-03-26 06:22:56 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Conferences:
+
+=====================================
+
