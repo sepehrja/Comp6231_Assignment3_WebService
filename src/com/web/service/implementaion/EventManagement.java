@@ -424,7 +424,7 @@ public class EventManagement implements WebInterface {
                 String bookResp = "Failed: did not send book request for your newEvent " + newEventID;
                 String cancelResp = "Failed: did not send cancel request for your oldEvent " + oldEventID;
                 synchronized (this) {
-                    if (onTheSameWeek(newEventID.substring(4), oldEventID) && exceedWeeklyLimit(customerID, newEventID.substring(4))) {
+                    if (onTheSameWeek(newEventID.substring(4), oldEventID) && !exceedWeeklyLimit(customerID, newEventID.substring(4))) {
                         cancelResp = cancelEvent(customerID, oldEventID, oldEventType);
                         if (cancelResp.startsWith("Success:")) {
                             bookResp = bookEvent(customerID, newEventID, newEventType);
