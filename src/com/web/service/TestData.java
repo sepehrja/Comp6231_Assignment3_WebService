@@ -29,7 +29,7 @@ public class TestData {
 		addTestData();
 	}
 
-	private static void addTestData() {
+	private synchronized static void addTestData() {
 		WebInterface MTLobj = montrealService.getPort(WebInterface.class);
 		WebInterface QUEobj = quebecService.getPort(WebInterface.class);
 		WebInterface SHEobj = sherbrookService.getPort(WebInterface.class);
@@ -66,7 +66,7 @@ public class TestData {
 		System.out.println("QUEC1234 bookEvent:");
 		System.out.println(QUEobj.bookEvent("QUEC1234", "SHEE110620", CONFERENCES));
 		System.out.println("QUEC1234 bookEvent:");
-		System.out.println(QUEobj.bookEvent("QUEC1234", "MTLEE230620", SEMINARS));
+		System.out.println(QUEobj.bookEvent("QUEC1234", "MTLE230620", SEMINARS));
 		System.out.println("*********************************************************");
 
 		System.out.println("Test3");
