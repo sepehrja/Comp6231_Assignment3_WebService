@@ -89,3 +89,16 @@ No Events of Type Conferences
 =====================================
 
 DATE: 2020-03-26 06:22:12 PM attempting to Logout
+DATE: 2020-04-03 01:44:32 PM  login attempt
+DATE: 2020-04-03 01:44:32 PM  Manager Login successful
+DATE: 2020-04-03 01:44:36 PM  attempting to listEventAvailability
+DATE: 2020-04-03 01:44:36 PM Client Action:  listEventAvailability | RequestParameters:  eventType: Conferences  | Server Response: MONTREAL Server Conferences:
+ (MTLE101020) in the Evening of 10/10/2020 Total[Remaining] Capacity: 2[2] || 
+=====================================
+SHERBROOK Server Conferences:
+No Events of Type Conferences
+=====================================
+QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+

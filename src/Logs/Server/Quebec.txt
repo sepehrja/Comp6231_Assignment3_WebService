@@ -64,3 +64,11 @@ No Events of Type Conferences
 DATE: 2020-03-26 06:27:15 PM  Server Started...
 DATE: 2020-03-26 06:27:17 PM  Server is Up & Running
 DATE: 2020-03-26 06:27:17 PM  UDP Server Started at port 7777
+DATE: 2020-04-03 01:43:36 PM  Server Started...
+DATE: 2020-04-03 01:43:37 PM  Server is Up & Running
+DATE: 2020-04-03 01:43:37 PM  UDP Server Started at port 7777
+DATE: 2020-04-03 01:44:36 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-04-03 01:44:36 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+;

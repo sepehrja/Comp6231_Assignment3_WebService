@@ -137,11 +137,18 @@ public class Client {
             System.out.println("Canceling response for " + customerID + " " + res);
         };
 
+        Runnable task6 = () -> {
+//            System.out.println("Connecting Montreal Server for " + customerID);
+            String res = servant.removeEvent(eventID, eventType);
+            System.out.println("removeEvent response for " + eventID + " " + res);
+        };
+
         Thread thread1 = new Thread(task1);
         Thread thread2 = new Thread(task2);
         Thread thread3 = new Thread(task3);
         Thread thread4 = new Thread(task4);
         Thread thread5 = new Thread(task5);
+        Thread thread6 = new Thread(task6);
 //        synchronized (thread1) {
         thread1.start();
         thread2.start();
@@ -156,6 +163,8 @@ public class Client {
         thread5.join();
 //        if (!thread1.isAlive() && !thread2.isAlive() && !thread3.isAlive() && !thread4.isAlive() && !thread5.isAlive()) {
         System.out.println("Concurrency Test Finished for BookEvent");
+        thread6.start();
+        thread6.join();
         init();
 //        }
     }
