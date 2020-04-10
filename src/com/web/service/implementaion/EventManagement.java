@@ -654,26 +654,40 @@ public class EventManagement implements WebInterface {
     }
 
     private void addCustomersToNextSameEvent(String oldEventID, String eventType, List<String> registeredClients) {
-        String response;
         for (String customerID :
                 registeredClients) {
             if (customerID.substring(0, 3).equals(serverID)) {
                 removeEventIfExists(customerID, eventType, oldEventID);
-                String nextSameEventResult = getNextSameEvent(allEvents.get(eventType).keySet(), eventType, oldEventID);
-                if (nextSameEventResult.equals("Failed")) {
-                    response = "Acquiring nextSameEvent :" + nextSameEventResult;
+                tryToBookNextSameEvent(customerID, eventType, oldEventID);
+            } else {
+                String res = sendUDPMessage(getServerPort(customerID.substring(0, 3)), "removeEvent", customerID, eventType, oldEventID);
+                if (res.startsWith("Success:")) {
+                    tryToBookNextSameEvent(customerID, eventType, oldEventID);
+                } else {
+                    String response = "Acquiring nextSameEvent for Client (" + customerID + "):" + res;
                     try {
                         Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
-                    return;
-                } else {
-                    bookEvent(customerID, nextSameEventResult, eventType);
                 }
-            } else {
-                sendUDPMessage(getServerPort(customerID.substring(0, 3)), "removeEvent", customerID, eventType, oldEventID);
             }
+        }
+    }
+
+    private void tryToBookNextSameEvent(String customerID, String eventType, String oldEventID) {
+        String response;
+        String nextSameEventResult = getNextSameEvent(allEvents.get(eventType).keySet(), eventType, oldEventID);
+        if (nextSameEventResult.equals("Failed")) {
+            response = "Acquiring nextSameEvent for Client (" + customerID + "):" + nextSameEventResult;
+            try {
+                Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
+            } catch (IOException e) {
+                e.printStackTrace();
+            }
+            return;
+        } else {
+            bookEvent(customerID, nextSameEventResult, eventType);
         }
     }
 
