@@ -4,7 +4,6 @@ import DataModel.ClientModel;
 import DataModel.EventModel;
 import Logger.Logger;
 import com.web.service.WebInterface;
-import org.omg.CORBA.ORB;
 
 import javax.jws.WebService;
 import javax.jws.soap.SOAPBinding;
@@ -26,7 +25,6 @@ public class EventManagement implements WebInterface {
     public static final String EVENT_SERVER_SHERBROOK = "SHERBROOK";
     public static final String EVENT_SERVER_QUEBEC = "QUEBEC";
     public static final String EVENT_SERVER_MONTREAL = "MONTREAL";
-    private ORB orb;
     private String serverID;
     private String serverName;
     // HashMap<EventType, HashMap <EventID, Event>>
@@ -62,10 +60,6 @@ public class EventManagement implements WebInterface {
             return Quebec_Server_Port;
         }
         return 1;
-    }
-
-    public void setORB(ORB orb_val) {
-        orb = orb_val;
     }
 
     private void addTestData() {
@@ -773,10 +767,10 @@ public class EventManagement implements WebInterface {
     public void addNewCustomerToClients(String customerID) {
         ClientModel newCustomer = new ClientModel(customerID);
         serverClients.put(newCustomer.getClientID(), newCustomer);
-        Map<String, List<String>> emptyEvents = new ConcurrentHashMap<>();
-        emptyEvents.put(EventModel.CONFERENCES, new ArrayList<>());
-        emptyEvents.put(EventModel.TRADE_SHOWS, new ArrayList<>());
-        emptyEvents.put(EventModel.SEMINARS, new ArrayList<>());
-        clientEvents.put(newCustomer.getClientID(), emptyEvents);
+//        Map<String, List<String>> emptyEvents = new ConcurrentHashMap<>();
+//        emptyEvents.put(EventModel.CONFERENCES, new ArrayList<>());
+//        emptyEvents.put(EventModel.TRADE_SHOWS, new ArrayList<>());
+//        emptyEvents.put(EventModel.SEMINARS, new ArrayList<>());
+        clientEvents.put(newCustomer.getClientID(), new ConcurrentHashMap<>());
     }
 }
