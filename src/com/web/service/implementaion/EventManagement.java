@@ -12,7 +12,10 @@ import java.net.DatagramPacket;
 import java.net.DatagramSocket;
 import java.net.InetAddress;
 import java.net.SocketException;
-import java.util.*;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
+import java.util.Set;
 import java.util.concurrent.ConcurrentHashMap;
 
 @WebService(endpointInterface = "com.web.service.WebInterface")
@@ -176,13 +179,13 @@ public class EventManagement implements WebInterface {
         String response;
         Map<String, EventModel> events = allEvents.get(eventType);
         StringBuilder builder = new StringBuilder();
-        builder.append(serverName + " Server " + eventType + ":\n");
+        builder.append(serverName).append(" Server ").append(eventType).append(":\n");
         if (events.size() == 0) {
-            builder.append("No Events of Type " + eventType + "\n");
+            builder.append("No Events of Type ").append(eventType).append("\n");
         } else {
             for (EventModel event :
                     events.values()) {
-                builder.append(event.toString() + " || ");
+                builder.append(event.toString()).append(" || ");
             }
         }
         builder.append("\n=====================================\n");
@@ -331,10 +334,10 @@ public class EventManagement implements WebInterface {
         StringBuilder builder = new StringBuilder();
         for (String eventType :
                 events.keySet()) {
-            builder.append(eventType + ":\n");
+            builder.append(eventType).append(":\n");
             for (String eventID :
                     events.get(eventType)) {
-                builder.append(eventID + " ||");
+                builder.append(eventID).append(" ||");
             }
             builder.append("\n=====================================\n");
         }
@@ -484,16 +487,23 @@ public class EventManagement implements WebInterface {
     /**
      * for udp calls only
      *
-     * @param oldEventID
+     * @param oldNewEventID
      * @param eventType
      * @param customerID
      * @return
      */
-    public String removeEventUDP(String oldEventID, String eventType, String customerID) {
+    public String removeEventUDP(String oldNewEventID, String eventType, String customerID) {
+        String oldEventID, newEventID;
+        String[] parts = oldNewEventID.split(":");
+        oldEventID = parts[0];
+        newEventID = parts[1];
         if (!checkClientExists(customerID)) {
             return "Failed: You " + customerID + " Are Not Registered in " + oldEventID;
         } else {
             if (removeEventIfExists(customerID, eventType, oldEventID)) {
+                if (!newEventID.equalsIgnoreCase("null")) {
+                    bookEvent(customerID, newEventID, eventType);
+                }
                 return "Success: Event " + oldEventID + " Was Removed from " + customerID + " Schedule";
             } else {
                 return "Failed: You " + customerID + " Are Not Registered in " + oldEventID;
@@ -510,13 +520,13 @@ public class EventManagement implements WebInterface {
     public String listEventAvailabilityUDP(String eventType) {
         Map<String, EventModel> events = allEvents.get(eventType);
         StringBuilder builder = new StringBuilder();
-        builder.append(serverName + " Server " + eventType + ":\n");
+        builder.append(serverName).append(" Server ").append(eventType).append(":\n");
         if (events.size() == 0) {
-            builder.append("No Events of Type " + eventType);
+            builder.append("No Events of Type ").append(eventType);
         } else {
             for (EventModel event :
                     events.values()) {
-                builder.append(event.toString() + " || ");
+                builder.append(event.toString()).append(" || ");
             }
         }
         builder.append("\n=====================================\n");
@@ -565,44 +575,41 @@ public class EventManagement implements WebInterface {
     }
 
     private String getNextSameEvent(Set<String> keySet, String eventType, String oldEventID) {
-        List<String> sortedIDs = new ArrayList<String>(keySet);
+        List<String> sortedIDs = new ArrayList<>(keySet);
         sortedIDs.add(oldEventID);
-        Collections.sort(sortedIDs, new Comparator<String>() {
-            @Override
-            public int compare(String ID1, String ID2) {
-                Integer timeSlot1 = 0;
-                switch (ID1.substring(3, 4).toUpperCase()) {
-                    case "M":
-                        timeSlot1 = 1;
-                        break;
-                    case "A":
-                        timeSlot1 = 2;
-                        break;
-                    case "E":
-                        timeSlot1 = 3;
-                        break;
-                }
-                Integer timeSlot2 = 0;
-                switch (ID2.substring(3, 4).toUpperCase()) {
-                    case "M":
-                        timeSlot2 = 1;
-                        break;
-                    case "A":
-                        timeSlot2 = 2;
-                        break;
-                    case "E":
-                        timeSlot2 = 3;
-                        break;
-                }
-                Integer date1 = Integer.parseInt(ID1.substring(8, 10) + ID1.substring(6, 8) + ID1.substring(4, 6));
-                Integer date2 = Integer.parseInt(ID2.substring(8, 10) + ID2.substring(6, 8) + ID2.substring(4, 6));
-                int dateCompare = date1.compareTo(date2);
-                int timeSlotCompare = timeSlot1.compareTo(timeSlot2);
-                if (dateCompare == 0) {
-                    return ((timeSlotCompare == 0) ? dateCompare : timeSlotCompare);
-                } else {
-                    return dateCompare;
-                }
+        sortedIDs.sort((ID1, ID2) -> {
+            Integer timeSlot1 = 0;
+            switch (ID1.substring(3, 4).toUpperCase()) {
+                case "M":
+                    timeSlot1 = 1;
+                    break;
+                case "A":
+                    timeSlot1 = 2;
+                    break;
+                case "E":
+                    timeSlot1 = 3;
+                    break;
+            }
+            int timeSlot2 = 0;
+            switch (ID2.substring(3, 4).toUpperCase()) {
+                case "M":
+                    timeSlot2 = 1;
+                    break;
+                case "A":
+                    timeSlot2 = 2;
+                    break;
+                case "E":
+                    timeSlot2 = 3;
+                    break;
+            }
+            Integer date1 = Integer.parseInt(ID1.substring(8, 10) + ID1.substring(6, 8) + ID1.substring(4, 6));
+            Integer date2 = Integer.parseInt(ID2.substring(8, 10) + ID2.substring(6, 8) + ID2.substring(4, 6));
+            int dateCompare = date1.compareTo(date2);
+            int timeSlotCompare = timeSlot1.compareTo(timeSlot2);
+            if (dateCompare == 0) {
+                return ((timeSlotCompare == 0) ? dateCompare : timeSlotCompare);
+            } else {
+                return dateCompare;
             }
         });
         int index = sortedIDs.indexOf(oldEventID) + 1;
@@ -652,20 +659,19 @@ public class EventManagement implements WebInterface {
                 registeredClients) {
             if (customerID.substring(0, 3).equals(serverID)) {
                 removeEventIfExists(customerID, eventType, oldEventID);
-                tryToBookNextSameEvent(customerID, eventType, oldEventID);
-            } else {
-                String res = sendUDPMessage(getServerPort(customerID.substring(0, 3)), "removeEvent", customerID, eventType, oldEventID);
-                if (res.startsWith("Success:")) {
-                    tryToBookNextSameEvent(customerID, eventType, oldEventID);
-                } else {
-                    String response = "Acquiring nextSameEvent for Client (" + customerID + "):" + res;
-                    try {
-                        Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
-                    } catch (IOException e) {
-                        e.printStackTrace();
-                    }
-                }
             }
+            //                if (res.startsWith("Success:")) {
+            //                    tryToBookNextSameEvent(customerID, eventType, oldEventID);
+            //                } else {
+            //                    String response = "Acquiring nextSameEvent for Client (" + customerID + "):" + res;
+            //                    try {
+            //                        Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
+            //                    } catch (IOException e) {
+            //                        e.printStackTrace();
+            //                    }
+            //                }
+
+            tryToBookNextSameEvent(customerID, eventType, oldEventID);
         }
     }
 
@@ -673,15 +679,22 @@ public class EventManagement implements WebInterface {
         String response;
         String nextSameEventResult = getNextSameEvent(allEvents.get(eventType).keySet(), eventType, oldEventID);
         if (nextSameEventResult.equals("Failed")) {
+            if (!customerID.substring(0, 3).equals(serverID)) {
+                sendUDPMessage(getServerPort(customerID.substring(0, 3)), "removeEvent", customerID, eventType, oldEventID + ":null");
+            }
             response = "Acquiring nextSameEvent for Client (" + customerID + "):" + nextSameEventResult;
             try {
                 Logger.serverLog(serverID, customerID, " addCustomersToNextSameEvent ", " oldEventID: " + oldEventID + " eventType: " + eventType + " ", response);
             } catch (IOException e) {
                 e.printStackTrace();
             }
-            return;
         } else {
-            bookEvent(customerID, nextSameEventResult, eventType);
+            if (customerID.substring(0, 3).equals(serverID)) {
+                bookEvent(customerID, nextSameEventResult, eventType);
+            } else {
+                String oldNewEventID = oldEventID + ":" + nextSameEventResult;
+                sendUDPMessage(getServerPort(customerID.substring(0, 3)), "removeEvent", customerID, eventType, oldNewEventID);
+            }
         }
     }
 
