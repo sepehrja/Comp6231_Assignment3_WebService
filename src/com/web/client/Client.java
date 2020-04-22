@@ -101,43 +101,32 @@ public class Client {
 //            System.out.println("Connecting Montreal Server for " + customerID);
             String res = servant.bookEvent(customerID, eventID, eventType);
             System.out.println("Booking response for " + customerID + " " + res);
-            res = servant.cancelEvent(customerID, eventID, eventType);
-            System.out.println("Canceling response for " + customerID + " " + res);
         };
         Runnable task2 = () -> {
             String customerID = "MTLC3456";
 //            System.out.println("Connecting Montreal Server for " + customerID);
             String res = servant.bookEvent(customerID, eventID, eventType);
             System.out.println("Booking response for " + customerID + " " + res);
-            res = servant.cancelEvent(customerID, eventID, eventType);
-            System.out.println("Canceling response for " + customerID + " " + res);
         };
         Runnable task3 = () -> {
             String customerID = "MTLC4567";
 //            System.out.println("Connecting Montreal Server for " + customerID);
             String res = servant.bookEvent(customerID, eventID, eventType);
             System.out.println("Booking response for " + customerID + " " + res);
-            res = servant.cancelEvent(customerID, eventID, eventType);
-            System.out.println("Canceling response for " + customerID + " " + res);
         };
         Runnable task4 = () -> {
-            String customerID = "MTLC6789";
 //            System.out.println("Connecting Montreal Server for " + customerID);
-            String res = servant.bookEvent(customerID, eventID, eventType);
-            System.out.println("Booking response for " + customerID + " " + res);
-            res = servant.cancelEvent(customerID, eventID, eventType);
-            System.out.println("Canceling response for " + customerID + " " + res);
-        };
-        Runnable task5 = () -> {
-            String customerID = "MTLC7890";
-//            System.out.println("Connecting Montreal Server for " + customerID);
-            String res = servant.bookEvent(customerID, eventID, eventType);
-            System.out.println("Booking response for " + customerID + " " + res);
-            res = servant.cancelEvent(customerID, eventID, eventType);
-            System.out.println("Canceling response for " + customerID + " " + res);
+            String res = servant.cancelEvent("MTLC2345", eventID, eventType);
+            System.out.println("Canceling response for MTLC2345" + " " + res);
+
+            res = servant.cancelEvent("MTLC3456", eventID, eventType);
+            System.out.println("Canceling response for MTLC3456" + " " + res);
+
+            res = servant.cancelEvent("MTLC4567", eventID, eventType);
+            System.out.println("Canceling response for MTLC4567" + " " + res);
         };
 
-        Runnable task6 = () -> {
+        Runnable task5 = () -> {
 //            System.out.println("Connecting Montreal Server for " + customerID);
             String res = servant.removeEvent(eventID, eventType);
             System.out.println("removeEvent response for " + eventID + " " + res);
@@ -148,23 +137,22 @@ public class Client {
         Thread thread3 = new Thread(task3);
         Thread thread4 = new Thread(task4);
         Thread thread5 = new Thread(task5);
-        Thread thread6 = new Thread(task6);
 //        synchronized (thread1) {
         thread1.start();
         thread2.start();
         thread3.start();
-        thread4.start();
-        thread5.start();
 //        }
         thread1.join();
         thread2.join();
         thread3.join();
+
+        //cancelling the event for clients
+        thread4.start();
         thread4.join();
-        thread5.join();
 //        if (!thread1.isAlive() && !thread2.isAlive() && !thread3.isAlive() && !thread4.isAlive() && !thread5.isAlive()) {
         System.out.println("Concurrency Test Finished for BookEvent");
-        thread6.start();
-        thread6.join();
+        thread5.start();
+        thread5.join();
         init();
 //        }
     }

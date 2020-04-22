@@ -114,3 +114,6 @@ DATE: 2020-04-22 03:43:39 PM ClientID: Event Manager | RequestType:  UDP reply s
  (QUEA250820) in the Afternoon of 25/08/2020 Total[Remaining] Capacity: 1[0] || 
 =====================================
 ;
+DATE: 2020-04-22 06:48:30 PM  Server Started...
+DATE: 2020-04-22 06:48:32 PM  Server is Up & Running
+DATE: 2020-04-22 06:48:32 PM  UDP Server Started at port 7777

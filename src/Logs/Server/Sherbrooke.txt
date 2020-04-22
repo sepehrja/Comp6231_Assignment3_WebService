@@ -195,3 +195,6 @@ Trade Shows:
 SHEE080820 ||
 =====================================
 
+DATE: 2020-04-22 06:48:30 PM  Server Started...
+DATE: 2020-04-22 06:48:32 PM  Server is Up & Running
+DATE: 2020-04-22 06:48:32 PM  UDP Server Started at port 6666
