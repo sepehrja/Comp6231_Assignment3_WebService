@@ -115,3 +115,83 @@ DATE: 2020-04-03 01:44:36 PM ClientID: Event Manager | RequestType:  UDP reply s
 No Events of Type Conferences
 =====================================
 ;
+DATE: 2020-04-22 03:38:14 PM  Server Started...
+DATE: 2020-04-22 03:38:16 PM  Server is Up & Running
+DATE: 2020-04-22 03:38:16 PM  UDP Server Started at port 6666
+DATE: 2020-04-22 03:38:21 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: SHEE080820 eventType: Trade Shows bookingCapacity 1  | ServerResponse: Success: Event SHEE080820 added successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse: Success: Event MTLA080820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse: Success: Event MTLA080820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse: Success: Event MTLM110820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse: Success: Event MTLM110820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: SHEE080820 eventType: Trade Shows  | ServerResponse: Success: Event SHEE080820 Booked Successfully
+DATE: 2020-04-22 03:38:53 PM  Server Started...
+DATE: 2020-04-22 03:38:54 PM  Server is Up & Running
+DATE: 2020-04-22 03:38:54 PM  UDP Server Started at port 6666
+DATE: 2020-04-22 03:38:59 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: SHEE080820 eventType: Trade Shows bookingCapacity 1  | ServerResponse: Success: Event SHEE080820 added successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse: Success: Event MTLA080820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLA080820 eventType: Conferences  | ServerResponse: Success: Event MTLA080820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse: Success: Event MTLM110820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLM110820 eventType: Seminars  | ServerResponse: Success: Event MTLM110820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse:  ... 
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: SHEE080820 eventType: Trade Shows  | ServerResponse: Success: Event SHEE080820 Booked Successfully
+DATE: 2020-04-22 03:39:18 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:18 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: SHERBROOK Server Conferences:
+No Events of Type Conferences
+=====================================
+;
+DATE: 2020-04-22 03:39:37 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:37 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: SHERBROOK Server Seminars:
+No Events of Type Seminars
+=====================================
+;
+DATE: 2020-04-22 03:39:49 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Trade Shows  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:49 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Trade Shows  | ServerResponse: SHERBROOK Server Trade Shows:
+ (SHEE080820) in the Evening of 08/08/2020 Total[Remaining] Capacity: 1[0] || 
+=====================================
+;
+DATE: 2020-04-22 03:41:02 PM ClientID: SHEC1234 | RequestType:  UDP request received removeEvent  | RequestParameters:  eventID: MTLM110820:MTLM120820 eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:41:02 PM ClientID: SHEC1234 | RequestType:  UDP request sent bookEvent  | RequestParameters:  eventID: MTLM120820 eventType: Seminars  | ServerResponse:  ... 
+DATE: 2020-04-22 03:41:02 PM ClientID: SHEC1234 | RequestType:  UDP reply receivedbookEvent  | RequestParameters:  eventID: MTLM120820 eventType: Seminars  | ServerResponse: Success: Event MTLM120820 Booked Successfully
+DATE: 2020-04-22 03:41:02 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: MTLM120820 eventType: Seminars  | ServerResponse: Success: Event MTLM120820 Booked Successfully
+DATE: 2020-04-22 03:41:02 PM ClientID: SHEC1234 | RequestType:  UDP reply sent removeEvent  | RequestParameters:  eventID: MTLM110820:MTLM120820 eventType: Seminars  | ServerResponse: Success: Event MTLM110820 Was Removed from SHEC1234 Schedule;
+DATE: 2020-04-22 03:41:07 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:41:07 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: SHERBROOK Server Seminars:
+No Events of Type Seminars
+=====================================
+;
+DATE: 2020-04-22 03:42:51 PM ClientID: SHEC1234 | RequestType:  CORBA getBookingSchedule  | RequestParameters: null | ServerResponse: Seminars:
+QUEA250820 ||MTLM120820 ||
+=====================================
+Conferences:
+MTLA080820 ||
+=====================================
+Trade Shows:
+SHEE080820 ||
+=====================================
+
+DATE: 2020-04-22 03:43:29 PM ClientID: SHEC1234 | RequestType:  UDP request received removeEvent  | RequestParameters:  eventID: MTLM120820:null eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:43:29 PM ClientID: SHEC1234 | RequestType:  UDP reply sent removeEvent  | RequestParameters:  eventID: MTLM120820:null eventType: Seminars  | ServerResponse: Success: Event MTLM120820 Was Removed from SHEC1234 Schedule;
+DATE: 2020-04-22 03:43:39 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:43:39 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: SHERBROOK Server Seminars:
+No Events of Type Seminars
+=====================================
+;
+DATE: 2020-04-22 03:43:49 PM ClientID: SHEC1234 | RequestType:  CORBA getBookingSchedule  | RequestParameters: null | ServerResponse: Seminars:
+QUEA250820 ||
+=====================================
+Conferences:
+MTLA080820 ||
+=====================================
+Trade Shows:
+SHEE080820 ||
+=====================================
+

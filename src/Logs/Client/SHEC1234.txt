@@ -14,3 +14,31 @@ DATE: 2020-03-26 06:22:56 PM Client Action:  bookEvent | RequestParameters:  nul
 
 =====================================
 
+DATE: 2020-04-22 03:42:48 PM  login attempt
+DATE: 2020-04-22 03:42:48 PM  Customer Login successful
+DATE: 2020-04-22 03:42:50 PM  attempting to getBookingSchedule
+DATE: 2020-04-22 03:42:51 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Seminars:
+QUEA250820 ||MTLM120820 ||
+=====================================
+Conferences:
+MTLA080820 ||
+=====================================
+Trade Shows:
+SHEE080820 ||
+=====================================
+
+DATE: 2020-04-22 03:43:02 PM  attempting to Logout
+DATE: 2020-04-22 03:43:48 PM  login attempt
+DATE: 2020-04-22 03:43:48 PM  Customer Login successful
+DATE: 2020-04-22 03:43:49 PM  attempting to getBookingSchedule
+DATE: 2020-04-22 03:43:49 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Seminars:
+QUEA250820 ||
+=====================================
+Conferences:
+MTLA080820 ||
+=====================================
+Trade Shows:
+SHEE080820 ||
+=====================================
+
+DATE: 2020-04-22 03:44:13 PM  attempting to Logout

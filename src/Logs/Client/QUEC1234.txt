@@ -1,0 +1,5 @@
+DATE: 2020-04-22 03:41:54 PM  login attempt
+DATE: 2020-04-22 03:41:54 PM  Customer Login successful
+DATE: 2020-04-22 03:41:56 PM  attempting to getBookingSchedule
+DATE: 2020-04-22 03:41:56 PM Client Action:  bookEvent | RequestParameters:  null  | Server Response: Booking Schedule Empty For QUEC1234
+DATE: 2020-04-22 03:42:44 PM  attempting to Logout

@@ -72,3 +72,45 @@ DATE: 2020-04-03 01:44:36 PM ClientID: Event Manager | RequestType:  UDP reply s
 No Events of Type Conferences
 =====================================
 ;
+DATE: 2020-04-22 03:38:14 PM  Server Started...
+DATE: 2020-04-22 03:38:16 PM  Server is Up & Running
+DATE: 2020-04-22 03:38:16 PM  UDP Server Started at port 7777
+DATE: 2020-04-22 03:38:21 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars bookingCapacity 1  | ServerResponse: Success: Event QUEA250820 added successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: QUEE150820 eventType: Trade Shows bookingCapacity 1  | ServerResponse: Success: Event QUEE150820 added successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP request received bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:21 PM ClientID: SHEC1234 | RequestType:  UDP reply sent bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully;
+DATE: 2020-04-22 03:38:53 PM  Server Started...
+DATE: 2020-04-22 03:38:54 PM  Server is Up & Running
+DATE: 2020-04-22 03:38:54 PM  UDP Server Started at port 7777
+DATE: 2020-04-22 03:38:59 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars bookingCapacity 1  | ServerResponse: Success: Event QUEA250820 added successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: Event Manager | RequestType:  CORBA addEvent  | RequestParameters:  eventID: QUEE150820 eventType: Trade Shows bookingCapacity 1  | ServerResponse: Success: Event QUEE150820 added successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP request received bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  CORBA bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully
+DATE: 2020-04-22 03:38:59 PM ClientID: SHEC1234 | RequestType:  UDP reply sent bookEvent  | RequestParameters:  eventID: QUEA250820 eventType: Seminars  | ServerResponse: Success: Event QUEA250820 Booked Successfully;
+DATE: 2020-04-22 03:39:18 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Conferences  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:18 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Conferences  | ServerResponse: QUEBEC Server Conferences:
+No Events of Type Conferences
+=====================================
+;
+DATE: 2020-04-22 03:39:37 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:37 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: QUEBEC Server Seminars:
+ (QUEA250820) in the Afternoon of 25/08/2020 Total[Remaining] Capacity: 1[0] || 
+=====================================
+;
+DATE: 2020-04-22 03:39:49 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Trade Shows  | ServerResponse:  ...
+DATE: 2020-04-22 03:39:49 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Trade Shows  | ServerResponse: QUEBEC Server Trade Shows:
+ (QUEE150820) in the Evening of 15/08/2020 Total[Remaining] Capacity: 1[1] || 
+=====================================
+;
+DATE: 2020-04-22 03:41:07 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:41:07 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: QUEBEC Server Seminars:
+ (QUEA250820) in the Afternoon of 25/08/2020 Total[Remaining] Capacity: 1[0] || 
+=====================================
+;
+DATE: 2020-04-22 03:41:56 PM ClientID: QUEC1234 | RequestType:  CORBA getBookingSchedule  | RequestParameters: null | ServerResponse: Booking Schedule Empty For QUEC1234
+DATE: 2020-04-22 03:43:39 PM ClientID: Event Manager | RequestType:  UDP request received listEventAvailability  | RequestParameters:  eventType: Seminars  | ServerResponse:  ...
+DATE: 2020-04-22 03:43:39 PM ClientID: Event Manager | RequestType:  UDP reply sent listEventAvailability  | RequestParameters:  eventID: null eventType: Seminars  | ServerResponse: QUEBEC Server Seminars:
+ (QUEA250820) in the Afternoon of 25/08/2020 Total[Remaining] Capacity: 1[0] || 
+=====================================
+;
